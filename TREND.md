@@ -14,7 +14,7 @@ This project implements a sophisticated algorithm for detecting optimal trading 
 2. **Signal Processing**:
    - Applies Savitzky-Golay filter to smooth the performance curve (PnL) - filter helps remove noise in the data and smooth out sharp values by approximating the neighborhood of each measurement with a step polynomial.
    
-   ![alt text](image.png)
+   ![alt text](plots/image.png)
 
    - Calculates first derivative (rate of change) and second derivative (acceleration/deceleration)
    - Establishes a quantile threshold (1% quantile) for significant negative second derivative values
