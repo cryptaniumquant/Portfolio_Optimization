@@ -60,13 +60,13 @@ This project implements a sophisticated algorithm for detecting optimal trading 
    - Negative change ratio: 1.0488
    - Positive change ratio: 1.0108
 
-   ![alt text](merged_AtomUsdt_fluger_Value_comparison.png)
+   ![alt text](plots/merged_AtomUsdt_fluger_Value_comparison.png)
 
 ### **2. Data Preparation**
    - After the corrected data is loaded, the data is resampled to hourly timeframes, taking the maximum value for each hour.
    - Applies Savitzky-Golay filter to smooth the performance curve (PnL) - filter helps remove noise in the data and smooth out sharp values by approximating the neighborhood of each measurement with a step polynomial. Soft parameters are used for smoothing, in the form of a window of 25 values and a unit polynomial.
 
-   ![alt text](image-1.png)
+   ![alt text](plots/image-1.png)
 
 ### **3. Signal Processing & Peak Detection**
 
@@ -84,4 +84,4 @@ This project implements a sophisticated algorithm for detecting optimal trading 
    - Includes a recovery period (24 hours) after cooldown where no new peaks are checked
    - Specific cooldawn values were taken as an example and averaged out. The final approach should not include an unweighted period as a constant, it is important to look at the work of the trend analysts themselves.
    
-![alt text](image-2.png)
+![alt text](plots/image-2.png)
