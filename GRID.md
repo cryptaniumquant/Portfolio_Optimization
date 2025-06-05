@@ -126,4 +126,4 @@ Daily Value-at-Risk	-0.71% -> -0.55%
 
 Expected Shortfall (cVaR)	-0.71% -> -0.55%
 
-![alt text](image.png)
+![alt text](plots/image.png)
