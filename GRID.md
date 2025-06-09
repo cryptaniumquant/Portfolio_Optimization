@@ -7,11 +7,11 @@ This project implements a systematic approach to optimize cryptocurrency grid tr
 The Ulcer Index is a volatility metric that measures the depth and duration of drawdowns in price series.
 The index is based on a given past period of N days. Working from oldest to newest a highest price (highest closing price) seen so far is maintained, and any close below that is a retracement, expressed as a percentage:
 
-$ Ri = \frac{100 * (price_i - max price)}{max price} $
+$Ri = \frac{100 * (price_i - max price)}{max price}$
 
 Where price_i is the closing price on day i, max price is the highest closing price seen so far.
 
-$ UlcerIndex = \sqrt{\frac{R_1^2 + R_2^2 + ... R_N^2}{N}} $
+$UlcerIndex = \sqrt{\frac{R_1^2 + R_2^2 + ... R_N^2}{N}}$
 
 Because the R values are squared it is immaterial whether they are expressed as positives or negatives; both result in a positive Ulcer Index.
 
@@ -45,7 +45,7 @@ This module implements portfolio optimization with a focus on risk management:
    - Implements Worst Realization (WR) optimization
    Calculate the Worst Realization (WR) or Worst Scenario of a returns series.
 
-   $ \text{WR}(X) = \max(-X) $ 
+   $\text{WR}(X) = \max(-X)$ 
    - Supports constraints on minimum = 0.01/maximum = 0.15 weights per strategy
    - Prevents over-concentration in single strategies
 
@@ -53,7 +53,7 @@ This module implements portfolio optimization with a focus on risk management:
 ## Final weights calculation
 Having received weights from the approach with optimization and having received weights from the approach with Ulzer index we calculate the final weight by the formula:
 
-$ FinalWeight = 0.75*UlcerIndexWeight + 0.25*OptimizationWeight $
+$FinalWeight = 0.75*UlcerIndexWeight + 0.25*OptimizationWeight$
 
 ## Usage
 
@@ -104,7 +104,7 @@ $ FinalWeight = 0.75*UlcerIndexWeight + 0.25*OptimizationWeight $
    - Calculating weights for strategies using convex optimization by Worst Realization function.
    - Normalizing the weights so that the total weight is equal to 100%
    - Calculating the final weight using both approaches in the proportion of 1 to 3
-   $ FinalWeight = 0.75*UlcerIndexWeight + 0.25*OptimizationWeight $
+   $ FinalWeight = 0.75*UlcerIndexWeight + 0.25*OptimizationWeight$
 
 ### **3. improvement**
 The advantage of our approach over uniformly distributed weights is shown in the figure below.
